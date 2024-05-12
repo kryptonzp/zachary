@@ -1,93 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zachary Nathaniel Dawduth Pillay</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #22272e; /* A dark blue background */
-            color: #fff; /* White text for better readability */
+            background-color: #0d1117;
+            color: #c9d1d9;
         }
-
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px;
         }
-
         .header {
             text-align: center;
+            margin-bottom: 40px;
         }
-
         .header h1 {
             font-size: 3em;
             margin-bottom: 0;
-            color: #e0e1ec; /* A light blue color for the heading */
+            color: yellow;
+            animation: glowing 2s ease-in-out infinite alternate;
         }
-
+        @keyframes glowing {
+            0% {
+                text-shadow: 0 0 5px yellow;
+            }
+            100% {
+                text-shadow: 0 0 20px yellow, 0 0 30px yellow, 0 0 40px yellow;
+            }
+        }
         .photos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
         }
-
         .photo {
-            width: 250px;
-            margin: 10px;
-            border: 1px solid #444a51; /* A slightly lighter border for the photos */
-            padding: 10px;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 20px;
             text-align: center;
-            position: relative; /* To layer the play button on the image */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
         }
-
+        .photo:hover {
+            transform: translateY(-5px);
+        }
         .photo img {
             width: 100%;
             height: auto;
+            border-radius: 6px;
         }
-
-        .play {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); /* Center the play button on the image */
-            width: 50px;
-            height: 50px;
-            border-radius: 50%; /* Create a circular play button */
-            background-color: rgba(255, 255, 255, 0.5); /* A semi-transparent white background for the button */
-            color: #22272e; /* Dark blue colored text for the play button */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer; /* Change the cursor to a pointer on hover */
-        }
-
-        .play:hover {
-            background-color: rgba(255, 255, 255, 0.8); /* Whiten the button on hover */
-        }
-
         .description {
             font-style: italic;
-            color: #ddd; /* A lighter gray for descriptions */
-        }
-
-        .likes {
+            color: #8b949e;
             margin-top: 10px;
         }
-
-        .likes img {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
+        .likes {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .likes p {
+            font-size: 1.5em;
+            color: #c9d1d9;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 6px;
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <header class="header">
@@ -97,10 +97,6 @@
             <div class="photo">
                 <img src="./public/playing.jpg" alt="Zachary">
                 <p class="description">Zachary playing!</p>
-                <div class="play"> <svg width="100%" height="100%" viewBox="0 0 100 100">
-                        <polygon points="55,50 10,10 90,10" fill="currentColor"></polygon>
-                    </svg>
-                </div>
             </div>
             <div class="photo">
                 <img src="./public/sleeping.jpg" alt="Zachary">
@@ -108,7 +104,14 @@
             </div>
         </section>
         <section class="likes">
-            <p>Zachary loves</p>
-            <iframe width="250" height="150" src="https://www.youtube.com/embed/TqfMHH67KJA?autoplay=1" frameborder="0" allowfullscreen></iframe>
+            <p>I love watching</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/TqfMHH67KJA" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/vcKxZLQETgE" frameborder="0" allowfullscreen></iframe>
+            </div>
         </section>
     </div>
+</body>
+</html>
