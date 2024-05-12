@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zachary Nathaniel Dawduth Pillay</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #22272e; /* A dark blue background */
+            color: #fff; /* White text for better readability */
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 0;
+            color: #e0e1ec; /* A light blue color for the heading */
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .photo {
+            width: 250px;
+            margin: 10px;
+            border: 1px solid #444a51; /* A slightly lighter border for the photos */
+            padding: 10px;
+            text-align: center;
+            position: relative; /* To layer the play button on the image */
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the play button on the image */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Create a circular play button */
+            background-color: rgba(255, 255, 255, 0.5); /* A semi-transparent white background for the button */
+            color: #22272e; /* Dark blue colored text for the play button */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; /* Change the cursor to a pointer on hover */
+        }
+
+        .play:hover {
+            background-color: rgba(255, 255, 255, 0.8); /* Whiten the button on hover */
+        }
+
+        .description {
+            font-style: italic;
+            color: #ddd; /* A lighter gray for descriptions */
+        }
+
+        .likes {
+            margin-top: 10px;
+        }
+
+        .likes img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Zachary Nathaniel Dawduth Pillay</h1>
+        </header>
+        <section class="photos">
+            <div class="photo">
+                <img src="./public/playing.jpg" alt="Zachary">
+                <p class="description">Zachary playing!</p>
+                <div class="play"> <svg width="100%" height="100%" viewBox="0 0 100 100">
+                        <polygon points="55,50 10,10 90,10" fill="currentColor"></polygon>
+                    </svg>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="./public/sleeping.jpg" alt="Zachary">
+                <p class="description">Zachary napping peacefully.</p>
+            </div>
+        </section>
+        <section class="likes">
+            <p>Zachary loves</p>
+            <iframe width="250" height="150" src="https://www.youtube.com/embed/TqfMHH67KJA?autoplay=1" frameborder="0" allowfullscreen></iframe>
+        </section>
+    </div>
